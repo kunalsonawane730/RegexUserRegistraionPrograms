@@ -16,7 +16,7 @@ namespace RegexUserRegistrationProgram
             string firstname = Console.ReadLine();
             if (firstName.IsMatch(firstname))
             {
-                Console.WriteLine("Your Name is :" + firstname);
+                Console.WriteLine("Your Name is: " + firstname);
             }
             else
             {
@@ -28,7 +28,7 @@ namespace RegexUserRegistrationProgram
             string lastname = Console.ReadLine();
             if (LastName.IsMatch(lastname))
             {
-                Console.WriteLine("Your last Name is:" + lastname);
+                Console.WriteLine("Your last Name is: " + lastname);
             }
             else
             {
@@ -40,13 +40,24 @@ namespace RegexUserRegistrationProgram
             string emailid = Console.ReadLine();
             if (EmailId.IsMatch(emailid))
             {
-                Console.WriteLine("Your emailId is:" +emailid);
+                Console.WriteLine("Your emailId is: " +emailid);
             }
             else
             {
                 Console.WriteLine("Your entered emailId is in invalid pattern");
             }
 
+            Regex MobileNo = new Regex("^[0-9]{2}[ ][6-9]{1}[0-9]{9}$");
+            Console.WriteLine("Enter your mobile number: ");
+            string mobileno = Console.ReadLine();
+            if (MobileNo.IsMatch(mobileno))
+            {
+                Console.WriteLine("Your mobile number is: " +mobileno);
+            }
+            else
+            {
+                Console.WriteLine("Your entered mobile number is in invalis pattern");
+            }
         }
     }
 }
