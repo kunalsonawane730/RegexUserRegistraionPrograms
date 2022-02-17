@@ -40,7 +40,7 @@ namespace RegexUserRegistrationProgram
             string emailid = Console.ReadLine();
             if (EmailId.IsMatch(emailid))
             {
-                Console.WriteLine("Your emailId is: " +emailid);
+                Console.WriteLine("Your emailId is: " + emailid);
             }
             else
             {
@@ -52,11 +52,23 @@ namespace RegexUserRegistrationProgram
             string mobileno = Console.ReadLine();
             if (MobileNo.IsMatch(mobileno))
             {
-                Console.WriteLine("Your mobile number is: " +mobileno);
+                Console.WriteLine("Your mobile number is: " + mobileno);
             }
             else
             {
-                Console.WriteLine("Your entered mobile number is in invalis pattern");
+                Console.WriteLine("Your entered mobile number is in invalid pattern");
+            }
+
+            Regex PassWord = new Regex("^[a-zA-Z0-9]{8}$");
+            Console.WriteLine("Enter your password here: ");
+            string password = Console.ReadLine();
+            if (PassWord.IsMatch(password))
+            {
+                Console.WriteLine("Your password is: " + password);
+            }
+            else
+            {
+                Console.WriteLine("Your entered password is in invalid pattern");
             }
         }
     }
