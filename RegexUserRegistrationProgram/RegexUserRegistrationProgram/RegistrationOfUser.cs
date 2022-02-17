@@ -59,7 +59,7 @@ namespace RegexUserRegistrationProgram
                 Console.WriteLine("Your entered mobile number is in invalid pattern");
             }
 
-            Regex PassWord = new Regex("^[a-zA-Z0-9]{8}$");
+            Regex PassWord = new Regex("^[A-Z]{1}[a-zA-Z0-9]{7}$");
             Console.WriteLine("Enter your password here: ");
             string password = Console.ReadLine();
             if (PassWord.IsMatch(password))
