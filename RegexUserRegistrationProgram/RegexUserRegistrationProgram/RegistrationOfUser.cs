@@ -22,6 +22,18 @@ namespace RegexUserRegistrationProgram
             {
                 Console.WriteLine("Your entered name is in invalid pattern");
             }
+            Regex LastName = new Regex("^[A-Z]{1}[a-z]{2,}$");
+
+            Console.WriteLine("Enter Last Name :");
+            string lastname = Console.ReadLine();
+            if (LastName.IsMatch(lastname))
+            {
+                Console.WriteLine("Your last Name is :" + lastname);
+            }
+            else
+            {
+                Console.WriteLine("Your entered last name is in invalid pattern");
+            }
         }
     }
 }
